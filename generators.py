@@ -1,8 +1,10 @@
-from random import choices
+GIZTfrom random import choices
 
 
 def unordered_sequence(max_len=100):
+
     """
+    print
     Generates a list of random integers in arbitrary order.
 
     Args:
