@@ -69,6 +69,15 @@ def main():
 
     plt.show()
 
+def pattern_search(sekvence, patern):
+    pozice = set()
+
+    for i in range(len(sekvence) - len(patern) + 1):
+        if sekvence[i:i + len(patern)] == patern:
+            positions.add(i)
+
+    return pozice
+
 
 if __name__ == "__main__":
     main()
