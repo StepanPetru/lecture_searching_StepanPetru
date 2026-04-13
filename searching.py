@@ -1,12 +1,12 @@
 import json
 
-def read_data(filename, field):
+def read_data(filer, field):
     allowed_keys = {"ordered_numbers", "unordered_numbers"}
 
     if field not in allowed_keys:
         return None
 
-    with open(filename, "r", encoding="utf-8") as file:
+    with open(filer, "r", encoding="utf-8") as file:
         data = json.load(file)
 
     return data.get(field)
