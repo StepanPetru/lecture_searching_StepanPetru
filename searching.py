@@ -77,7 +77,24 @@ def pattern_search(sekvence, patern):
             positions.add(i)
 
     return pozice
+def pattern_search(sequence, pattern):
+    positions = set()
 
+    i = 0
+    while i <= len(sequence) - len(pattern):
+        match = True
+
+        for j in range(len(pattern)):
+            if sequence[i + j] != pattern[j]:
+                match = False
+                break
+
+        if match:
+            positions.add(i)
+
+        i += 1
+
+    return positions
 
 if __name__ == "__main__":
     main()
